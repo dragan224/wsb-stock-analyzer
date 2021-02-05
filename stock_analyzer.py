@@ -22,7 +22,10 @@ class stock_analyzer(object):
             title = submission.title.upper()
 
             for word in title.split():
-                if word in self.symbol_dict.keys():
+                if word.startswith('$'): # $AAPL == AAPL
+                    word = word[1:]
+
+                if word in self.symbol_dict.keys() or word in self.symbol_dict.keys():
                     self.symbol_dict[word] += 1
 
     def sort_symbols_mentions(self):
