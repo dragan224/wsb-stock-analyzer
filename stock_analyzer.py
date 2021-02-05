@@ -5,8 +5,7 @@ import sys
 class stock_analyzer(object):
 
     def __init__(self):
-        self.user_agent = ("WSB Stock Analyzer")
-        self.r = praw.Reddit(user_agent=self.user_agent, client_id='gLYszkvAMDEmCg', client_secret='lHNozyOHkP7eMUOlEJiZnw6rnP1DxA')
+        self.r = praw.Reddit(user_agent=self.'WSB Stock Analyzer', client_id='gLYszkvAMDEmCg', client_secret='lHNozyOHkP7eMUOlEJiZnw6rnP1DxA')
         self.main()
         
     def read_symbols(self):
@@ -25,7 +24,7 @@ class stock_analyzer(object):
                 if word.startswith('$'): # $AAPL == AAPL
                     word = word[1:]
 
-                if word in self.symbol_dict.keys() or word in self.symbol_dict.keys():
+                if word in self.symbol_dict.keys():
                     self.symbol_dict[word] += 1
 
     def sort_symbols_mentions(self):
