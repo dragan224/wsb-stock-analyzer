@@ -5,11 +5,8 @@ import sys
 class stock_analyzer(object):
 
     def __init__(self):
-        self.user_agent = ("Stock analyzer")
+        self.user_agent = ("WSB Stock Analyzer")
         self.r = praw.Reddit(user_agent=self.user_agent, client_id='gLYszkvAMDEmCg', client_secret='lHNozyOHkP7eMUOlEJiZnw6rnP1DxA')
-        self.last_day_of_current_month = 0
-        self.month_of_last_submission = 0
-        self.submission_for_month = False
         self.main()
         
     def read_symbols(self):
@@ -31,14 +28,11 @@ class stock_analyzer(object):
     def sort_symbols_mentions(self):
         self.symbol_dict = dict(sorted(self.symbol_dict.items(), key=lambda item: item[1], reverse=True))
 
-    def print_stock_stats(self, symbol): 
-        print ('%s Mentions: %d' %(symbol.title().upper(), self.symbol_dict[symbol]))
-
     def build_output(self):
         print ('Scanned top %d submissions from r/wallstreetbets' % self.limit)
         for key in self.symbol_dict.keys():
             if self.symbol_dict[key] > 0:
-                self.print_stock_stats(key)
+                print ('%s Mentions: %d' %(key.upper(), self.symbol_dict[key]))
 
     def main(self):
         self.limit = int(sys.argv[1])
