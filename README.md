@@ -1,4 +1,4 @@
-#Reddit WallStreetBets Stock Analyzer
+### Reddit WallStreetBets Stock Analyzer
 
 Script that spits out most commonly talked about stock symbols in Reddit's WallStreetBets forum.
 Stock symbols are read from a text file - symbols.txt
