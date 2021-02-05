@@ -17,3 +17,8 @@ AMC Mentions: 53
 BB Mentions: 1
 ```
 
+### Requirements
+Reddit praw package
+```
+pip3 install praw
+```
