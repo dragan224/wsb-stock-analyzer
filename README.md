@@ -7,3 +7,13 @@ Usage:
 ```
 python3 stock_analyzer.py <number_of_top_posts_to_scan>
 ```
+
+Sample output:
+```
+Dragans-MacBook-Pro:wsb-stock-analyzer dragan224$ python3 stock_analyzer.py 1000
+Scanned top 1000 submissions from r/wallstreetbets
+GME Mentions: 176
+AMC Mentions: 53
+BB Mentions: 1
+```
+
