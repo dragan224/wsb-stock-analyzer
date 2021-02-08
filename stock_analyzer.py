@@ -5,7 +5,7 @@ import sys
 class stock_analyzer(object):
 
     def __init__(self):
-        self.r = praw.Reddit(user_agent=self.'WSB Stock Analyzer', client_id='gLYszkvAMDEmCg', client_secret='lHNozyOHkP7eMUOlEJiZnw6rnP1DxA')
+        self.r = praw.Reddit(user_agent='WSB Stock Analyzer', client_id='gLYszkvAMDEmCg', client_secret='lHNozyOHkP7eMUOlEJiZnw6rnP1DxA')
         self.main()
         
     def read_symbols(self):
